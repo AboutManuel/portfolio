@@ -191,7 +191,6 @@ Thanks to the changes, we experienced significant improvements in the following 
 - Consistency in input and document formats.
 - Increased scope for analysis as a result of unified and normalized categories.
 - Enhanced user experience, leading to an increase in action items as the process was more straightforward than before.
-- Tracking of open incidents became simpler and more effective.
-- Here's a look at the tracking system post-improvement:
-
-![Tracking](../../assets/images/excel_vba_open_actions.png)
+- Back-end users, such as those in charge of calculating KPIs, benefited enormously from the automation of 95% of their tasks. They simply needed to select the necessary filters (e.g., months, assignee) for the most part.
+- Tracking of open incidents became simpler and more effective. 
+- We were able to create new KPIs and KAIs: Open action items per assignee, Monthly status update, New stats to track each root cause occurence.
