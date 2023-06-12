@@ -27,6 +27,7 @@ To ensure the data quality:
 - I pre-loaded the current date into the form.
 
 ```vba
+
 Dim TodaysDate As String
    
     TodaysDate = Format(Now(), "dd/mm/yyyy")
@@ -35,6 +36,7 @@ Dim TodaysDate As String
     ClosureDate.Value = TodaysDate
 
 End Sub
+
 ```
 
 - Made sure the estimated resolution date for an entry could not be set earlier than the report creation date.
@@ -53,6 +55,7 @@ End Sub
 - I locked all sheets, excluding specific columns, and created a simple prompt for supervisors to fix the sheet if any issue arose. Upon closing the document, all pages would automatically be protected again.
 
 ```vba
+
 Private Sub Workbook_BeforeClose(Cancel As Boolean)
     Application.DisplayAlerts = False
 
@@ -80,11 +83,13 @@ Private Sub Workbook_BeforeClose(Cancel As Boolean)
     'Save the workbook
     'ThisWorkbook.Save
 End Sub
+
 ```
 
 - I also introduced dropdown lists for necessary categories to standardize the inputs.
 
 ```vba
+
 Dim index As Integer
 index = variable_1.ListIndex
 
@@ -102,6 +107,7 @@ Select Case index
     ' Add similar cases for different indices
 End Select
 End Sub
+
 ```
 {: .highlight }
 Data Quality is best done when you apply Data Standards in the origin / input of the information. 
@@ -112,6 +118,7 @@ To enhance the user experience:
 Here's how the form looks when the "Cancel" button is clicked:
 
 ```vba
+
 Private Sub CANCEL_Click()
 result = MsgBox("Cancel input loading? Unsaved data will be lost.", vbYesNo, "Cancel?")
 If result = vbYes Then
@@ -121,6 +128,7 @@ If result = vbNo Then
 Cancel = True
 End If
 End Sub
+
 ```
 ![Form Cancel](../../assets/images/excel_vba_cancel.png)
 
@@ -131,7 +139,9 @@ Here's a visual representation of the inputs:
 
 
 ```
+
 =+COUNTIFS(PGD[CAT1];VALIDACION!$F$9;PGD[AREA];VALIDACION!$B$3;PGD[DATE];">=" &VLOOKUP(S11;MESES[[#All];[MES]:[FIN]];2;FALSE);PGD[DATE];"<=" &VLOOKUP(S11;MESES[[#All];[MES]:[FIN]];3;FALSE))
+
 ```
 
 # The outcome
