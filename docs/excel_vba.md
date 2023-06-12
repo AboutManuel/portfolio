@@ -22,7 +22,7 @@ This is how the input form looks:
 
 I also prioritized data quality by implementing checks and standards at the point of data entry.
 
-To ensure the data quality:
+## To ensure the data quality:
 
 - I pre-loaded the current date into the form.
 
@@ -97,11 +97,12 @@ End Select
 End Sub
 ```
 
+
 {: .highlight }
 Data Quality is best done when you apply Data Standards in the origin / input of the information. 
 
 
-To enhance the user experience:
+## To enhance the user experience:
 
 - I added a validation prompt before pressing the "Cancel" button to prevent accidental loss of information.
 Here's how the form looks when the "Cancel" button is clicked:
