@@ -27,16 +27,11 @@ To ensure the data quality:
 - I pre-loaded the current date into the form.
 
 ```vba
-
 Dim TodaysDate As String
-   
     TodaysDate = Format(Now(), "dd/mm/yyyy")
-   
     DetectionDate.Value = TodaysDate
     ClosureDate.Value = TodaysDate
-
 End Sub
-
 ```
 
 - Made sure the estimated resolution date for an entry could not be set earlier than the report creation date.
@@ -44,7 +39,6 @@ End Sub
 ```vba
 Private Sub ClosureDate_afterupdate()
 If ClosureDate.Value < DetectionDate.Value Then
-
  MsgBox "The closure date cannot be earlier than the detection date."
  End If
 End Sub
@@ -55,10 +49,8 @@ End Sub
 - I locked all sheets, excluding specific columns, and created a simple prompt for supervisors to fix the sheet if any issue arose. Upon closing the document, all pages would automatically be protected again.
 
 ```vba
-
 Private Sub Workbook_BeforeClose(Cancel As Boolean)
     Application.DisplayAlerts = False
-
     'Protect worksheets with passwords
     Sheets("sheet1").Protect password:="password1"
     Sheets("sheet2").Protect password:="password2"
@@ -69,7 +61,7 @@ Private Sub Workbook_BeforeClose(Cancel As Boolean)
     Sheets("sheet7").Protect password:="password7"
     Sheets("sheet8").Protect password:="password8"
     Sheets("sheet9").Protect password:="password9"
-
+   
     'Unprotect worksheet for editing
     Sheets("sheet1").Unprotect password:="password1"
 
@@ -83,18 +75,14 @@ Private Sub Workbook_BeforeClose(Cancel As Boolean)
     'Save the workbook
     'ThisWorkbook.Save
 End Sub
-
 ```
 
 - I also introduced dropdown lists for necessary categories to standardize the inputs.
 
 ```vba
-
 Dim index As Integer
 index = variable_1.ListIndex
-
 category.Clear
-
 Select Case index
     Case Is = 0
         With category
@@ -107,7 +95,6 @@ Select Case index
     ' Add similar cases for different indices
 End Select
 End Sub
-
 ```
 {: .highlight }
 Data Quality is best done when you apply Data Standards in the origin / input of the information. 
@@ -118,7 +105,6 @@ To enhance the user experience:
 Here's how the form looks when the "Cancel" button is clicked:
 
 ```vba
-
 Private Sub CANCEL_Click()
 result = MsgBox("Cancel input loading? Unsaved data will be lost.", vbYesNo, "Cancel?")
 If result = vbYes Then
@@ -128,7 +114,6 @@ If result = vbNo Then
 Cancel = True
 End If
 End Sub
-
 ```
 ![Form Cancel](../../assets/images/excel_vba_cancel.png)
 
@@ -139,9 +124,7 @@ Here's a visual representation of the inputs:
 
 
 ```
-
 =+COUNTIFS(PGD[CAT1];VALIDACION!$F$9;PGD[AREA];VALIDACION!$B$3;PGD[DATE];">=" &VLOOKUP(S11;MESES[[#All];[MES]:[FIN]];2;FALSE);PGD[DATE];"<=" &VLOOKUP(S11;MESES[[#All];[MES]:[FIN]];3;FALSE))
-
 ```
 
 # The outcome
