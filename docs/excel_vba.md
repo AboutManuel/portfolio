@@ -3,14 +3,16 @@ layout: default
 title: Excel VBA
 nav_order: 3
 ---
+
+{: .warning }
+The code snippets included in this document have been generalized into a template format and any sensitive information has been omitted. Please note that there may be minor errors present. Always test the code in a controlled environment before deploying it in production.
+
 # The challenge
 Our team was working with an Excel spreadsheet that was used across several areas. This tool was meant for supervisors and team leaders to manually input problem descriptions and action items. However, this manual process often led to alterations such as adding columns, changing formats, and even breaking the structural integrity of the document.
 
 Here's a look at the basic Excel spreadsheet we started with:
 
 ![Basic view of the Excel Spreadsheet](../../assets/images/excel_vba_sheet.png)
-
-
 
 
 # The solution
@@ -74,6 +76,61 @@ Private Sub Workbook_BeforeClose(Cancel As Boolean)
 
     'Save the workbook
     'ThisWorkbook.Save
+End Sub
+```
+
+![Form Supervisor Log In](../../assets/images/excel_vba_supervisor.png)
+
+```vb
+Private Sub VALIDATE_Click()
+
+Dim username As String
+Dim password As Variant
+Dim sheetName As String
+Dim existingUser
+Dim foundData
+Dim Range As Range
+
+existingUser = Application.WorksheetFunction.CountIf(Sheets("sheetName").Range("A:A"), Me.txtUsername.Value)
+
+Set Range = Sheets("sheetName").Range("A:A")
+
+'Validating that values have been entered.
+If Me.txtUsername.Value = "" Or Me.txtPassword.Value = "" Then
+    MsgBox "Please enter both username and password", vbExclamation, "ATTENTION!"
+    Me.txtUsername.SetFocus
+    
+    'Validating that the user exists in the table.
+ElseIf existingUser = 0 Then
+    MsgBox "The user '" & Me.txtUsername & "' does not exist", vbExclamation, "ATTENTION!"
+    
+    'If the user exists, validate the password.
+ElseIf existingUser = 1 Then
+    foundData = Range.Find(What:=Me.txtUsername.Value, MatchCase:=False, LookAt:=xlWhole).Address
+    password = CStr(Sheets("sheetName").Range(foundData).Offset(0, 1).Value)
+    
+    'If the username and password match...
+    If LCase(CStr(Sheets(("sheetName")).Range(foundData).Value)) = LCase(Me.txtUsername.Value) And password = _
+       Me.txtPassword.Value Then
+       
+        'Here is the code to grant access to whatever the developer decides
+
+        Sheets("sheet1").Unprotect password:="password1"
+        
+        Sheets("sheet1").Range("1:6").Locked = True
+        Sheets("sheet1").Range("7:9999").Locked = False
+
+        
+        Sheets("sheet1").Protect password:="password1", AllowDeletingRows:=True
+        
+        Unload Me
+        
+    Else
+        
+        MsgBox "The password is invalid", vbExclamation, "ATTENTION!"
+    End If
+End If
+
 End Sub
 ```
 
