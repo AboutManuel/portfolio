@@ -9,13 +9,14 @@ The code snippets included in this document have been generalized into a templat
 
 # Key Takeaways
 
->{: .new }
->> - The team started with a manual and inconsistent process of inputting data in Excel.
->> - Excel VBA was utilized to create an input form that standardized data entry.
->> - Data quality was ensured by introducing features such as pre-loading current date, locking worksheets, and adding validation checks.
->> - User experience was improved with clear validation prompts and dropdown lists for standardized inputs.
->> - Significant improvements were realized in the areas of data consistency, scope of analysis, user experience, and process automation.
->> - New KPIs and Key Activity Indicators were developed, enabling easier tracking of open incidents and performance analysis.
+{: .new }
+> Key Takeaways
+> - The team started with a manual and inconsistent process of inputting data in Excel.
+> - Excel VBA was utilized to create an input form that standardized data entry.
+> - Data quality was ensured by introducing features such as pre-loading current date, locking worksheets, and adding validation checks.
+> - User experience was improved with clear validation prompts and dropdown lists for standardized inputs.
+> - Significant improvements were realized in the areas of data consistency, scope of analysis, user experience, and process automation.
+> - New KPIs and Key Activity Indicators were developed, enabling easier tracking of open incidents and performance analysis.
 
 
 
