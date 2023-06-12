@@ -4,6 +4,9 @@ theme: just-the-docs
 
 url: https://aboutmanuel.github.io/portfolio/
 
+permalink: pretty
+
+
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/Avatar_Gr.png"
 
