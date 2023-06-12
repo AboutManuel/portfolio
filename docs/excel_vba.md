@@ -9,7 +9,7 @@ The code snippets included in this document have been generalized into a templat
 
 # Key Takeaways
 
-{: .new }
+{: .new-title}
 > Key Takeaways
 > - The team started with a manual and inconsistent process of inputting data in Excel.
 > - Excel VBA was utilized to create an input form that standardized data entry.
