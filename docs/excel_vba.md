@@ -96,10 +96,10 @@ Select Case index
 End Select
 End Sub
 ```
-```markdown
+
 {: .highlight }
 Data Quality is best done when you apply Data Standards in the origin / input of the information. 
-```
+
 
 To enhance the user experience:
 
