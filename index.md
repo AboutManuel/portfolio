@@ -14,3 +14,13 @@ But there's more to it than just numbers. I strongly believe that art and design
 {: .fs-3 .fw-300 }
 ---
 
+# Table of Contents
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. Test
+{:toc}
+
+---
