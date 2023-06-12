@@ -6,7 +6,7 @@ description: "Manuel's Portfolio"
 permalink: /
 ---
 
-# About this pages
+# Welcome to my portfolio!
 {: .fs-9 }
 
 Welcome to my journey of turning raw data into insightful stories and visual narratives. Here I document my learning process while I search for new ways of understanding, manipulating, and communicating data insights. 
