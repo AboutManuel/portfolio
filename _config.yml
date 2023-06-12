@@ -74,6 +74,13 @@ callouts:
 # For copy button on code
 enable_copy_code_button: true
     
-    
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
 
 
