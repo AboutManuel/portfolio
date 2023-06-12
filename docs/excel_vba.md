@@ -7,6 +7,19 @@ nav_order: 3
 {: .warning }
 The code snippets included in this document have been generalized into a template format and any sensitive information has been omitted. Please note that there may be minor errors present. Always test the code in a controlled environment before deploying it in production.
 
+# Key Takeaways
+
+>{: .new }
+>> - The team started with a manual and inconsistent process of inputting data in Excel.
+>> - Excel VBA was utilized to create an input form that standardized data entry.
+>> - Data quality was ensured by introducing features such as pre-loading current date, locking worksheets, and adding validation checks.
+>> - User experience was improved with clear validation prompts and dropdown lists for standardized inputs.
+>> - Significant improvements were realized in the areas of data consistency, scope of analysis, user experience, and process automation.
+>> - New KPIs and Key Activity Indicators were developed, enabling easier tracking of open incidents and performance analysis.
+
+
+
+
 # The challenge
 Our team was working with an Excel spreadsheet that was used across several areas. This tool was meant for supervisors and team leaders to manually input problem descriptions and action items. However, this manual process often led to alterations such as adding columns, changing formats, and even breaking the structural integrity of the document.
 
