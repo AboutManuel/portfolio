@@ -8,7 +8,7 @@ Our team was working with an Excel spreadsheet that was used across several area
 
 Here's a look at the basic Excel spreadsheet we started with:
 
-![Basic view of the Excel Spreadsheet](./assets/images/excel_vba_sheet.png)
+![Basic view of the Excel Spreadsheet](../../assets/images/excel_vba_sheet.png)
 
 
 
