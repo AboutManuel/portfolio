@@ -18,7 +18,7 @@ I stumbled upon Excel VBA (Visual Basic for Applications), a powerful feature th
 
 This is how the input form looks:
 
-![Input Form](./assets/images/excel_vba_form.png)
+![Input Form](../../assets/images/excel_vba_form.png)
 
 I also prioritized data quality by implementing checks and standards at the point of data entry.
 
@@ -48,7 +48,7 @@ If ClosureDate.Value < DetectionDate.Value Then
 End Sub
 ```
 
-![Form Dates](./assets/images/excel_vba_dates.png)
+![Form Dates](../../assets/images/excel_vba_dates.png)
 
 - I locked all sheets, excluding specific columns, and created a simple prompt for supervisors to fix the sheet if any issue arose. Upon closing the document, all pages would automatically be protected again.
 
@@ -122,12 +122,12 @@ Cancel = True
 End If
 End Sub
 ```
-![Form Cancel](./assets/images/excel_vba_cancel.png)
+![Form Cancel](../../assets/images/excel_vba_cancel.png)
 
 I then linked these inputs to the visual stats that were previously calculated manually.
 Here's a visual representation of the inputs:
 
-![Pyramid](./assets/images/excel_vba_pyramid.png)
+![Pyramid](../../assets/images/excel_vba_pyramid.png)
 
 
 ```
@@ -143,4 +143,4 @@ Thanks to the changes, we experienced significant improvements in the following 
 - Tracking of open incidents became simpler and more effective.
 - Here's a look at the tracking system post-improvement:
 
-![Tracking](./assets/images/excel_vba_open_actions.png)
+![Tracking](../../assets/images/excel_vba_open_actions.png)
